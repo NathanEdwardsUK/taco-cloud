@@ -24,10 +24,10 @@ public class OrderController {
     }
 
     @PostMapping
-    public String processOrder(@Valid TacoOrder order, Errors errords,
+    public String processOrder(@Valid TacoOrder order, Errors errors,
                                SessionStatus sessionStatus) {
 
-        if(errords.hasErrors()) {
+        if(errors.hasErrors()) {
             return "orderForm";
         }
 
